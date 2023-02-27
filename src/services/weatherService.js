@@ -12,7 +12,7 @@ const getWeatherData = (infotype,searchParams) =>{
 const formatCurrentWeather = (data) =>{
     const {
         coord:{lat,lon},
-        main:{temp,feel_like, temp_min,temp_max,humidity},
+        main:{temp,feels_like,temp_min,temp_max,humidity},
         name,
         dt,
         sys:{country,sunrise,sunset},
@@ -20,7 +20,7 @@ const formatCurrentWeather = (data) =>{
         wind:{speed}
     } =data
     const {main:details,icon} = weather[0]
-    return {lat,lon,temp,feel_like,temp_min,temp_max,humidity,name,dt,country,
+    return {lat,lon,temp,feels_like,temp_min,temp_max,humidity,name,dt,country,
     sunrise,sunset,details,icon,speed}
 }
 const formatForecastWeather= (data) =>{
@@ -35,7 +35,7 @@ const formatForecastWeather= (data) =>{
     hourly = hourly.slice(1,6).map(d=>{
         return {
             title: formatToLocalTime(d.dt,timezone,"hh:mm a"),
-            temp: d.temp.day,
+            temp: d.temp,
             icon: d.weather[0].icon
         };
     });
