@@ -6,3 +6,7 @@
 ![Screenshot (12)](https://user-images.githubusercontent.com/71403848/221643815-d30edaf9-bf2e-40c3-abb0-dae9407fa9d5.png)
 
 ![Screenshot (15)](https://user-images.githubusercontent.com/71403848/221643868-939fe4d3-dafd-4d45-ba06-4e55f1a0f098.png)
+
+
+## NOTE!!!!
+  - please add your api key to run this project at src/services/weatherService.js.
